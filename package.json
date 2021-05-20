@@ -28,6 +28,7 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "markdown-it-container": "3.0.0",
+    "standard-version": "^9.3.0",
     "vuepress": "1.5.3"
   },
   "keywords": [
