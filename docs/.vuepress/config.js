@@ -91,6 +91,7 @@ function genSidebarConfig (title) {
         'started',
         'options',
         'complex',
+        'composition-api'
       ]
     }
   ]
