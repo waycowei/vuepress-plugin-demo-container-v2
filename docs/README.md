@@ -23,9 +23,9 @@ The Demo Container uses Vuepress's [chainMarkdown, extendMarkdown API](https://v
 xxx
 :::
 ```
-Wrap the `<demo-block> </demo-block>` component for it, and pick up the sample code using `<!-Pre-render-demo: $ {content}: pre-render-demo->` comments Cache mode, wait for subsequent reading, specific implementation [click here to view](https://github.com/calebman/vuepress-plugin-demo-container/blob/master/src/common/container.js);
+Wrap the `<demo-block> </demo-block>` component for it, and pick up the sample code using `<!-Pre-render-demo: $ {content}: pre-render-demo->` comments Cache mode, wait for subsequent reading, specific implementation [click here to view](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/container.js);
 
-2. Expand the markdown.render method, based on its rendering results, read the sample code annotated by `pre-render-demo` and use [vue-template-compiler](https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler) compile it into a Redner Function and introduce it as a subcomponent of the entire sample page. The output of the expanded method is a code block that conforms to Vue Template syntax, specific implementation [click here to view](https://github.com/calebman/vuepress-plugin-demo-container/blob/master/src/common/render.js);
+2. Expand the markdown.render method, based on its rendering results, read the sample code annotated by `pre-render-demo` and use [vue-template-compiler](https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler) compile it into a Redner Function and introduce it as a subcomponent of the entire sample page. The output of the expanded method is a code block that conforms to Vue Template syntax, specific implementation [click here to view](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/render.js);
 
 3. The sample page code will be processed by [vue-loader](https://vue-loader.vuejs.org/guide/) and compiled into the final document
 
@@ -78,7 +78,7 @@ export default {
   data() {
     return {
       inputRepoName: '',
-      repoName: 'calebman/vuepress-plugin-demo-container',
+      repoName: 'wkcole/vuepress-plugin-demo-container-v2',
       branches: ['master', 'dev'],
       currentBranch: 'master',
       loading: false,
@@ -173,7 +173,7 @@ export default {
 ## Why not...?
 
 ::: tip Are there any other options
-Before I created the Demo Container, I searched for plug-ins that meet the above requirements as much as possible, and found some useful plugins. If there are other available plug-ins that have been omitted by the author, I can add it by mentioning [Issus](https://github.com/calebman/vuepress-plugin-demo-container/issues). Thank you very much.
+Before I created the Demo Container, I searched for plug-ins that meet the above requirements as much as possible, and found some useful plugins. If there are other available plug-ins that have been omitted by the author, I can add it by mentioning [Issus](https://github.com/wkcole/vuepress-plugin-demo-container-v2/issues). Thank you very much.
 :::
 
 ### vuepress-plugin-demo-block
@@ -209,6 +209,11 @@ This takes advantage of the features of Vuepress's ability to compile Vue compon
   <a-tooltip title="JianhuiChen">
     <a href="https://github.com/calebman" target="_blank">
       <a-avatar src="https://avatars0.githubusercontent.com/u/27751088" :size="54"/>
+    </a>
+  </a-tooltip>
+  <a-tooltip title="WaycoWei">
+    <a href="https://github.com/wkcole" target="_blank">
+      <a-avatar src="https://avatars.githubusercontent.com/u/8675871" :size="54"/>
     </a>
   </a-tooltip>
 </p>

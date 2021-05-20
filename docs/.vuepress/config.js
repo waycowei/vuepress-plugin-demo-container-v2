@@ -1,9 +1,9 @@
 const path = require('path')
 const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
-  base: isProd ? '/vuepress-plugin-demo-container/' : '/',
+  base: isProd ? '/vuepress-plugin-demo-container-v2/' : '/',
   port: '6700',
-  dest: 'docs/.vuepress/dist/vuepress-plugin-demo-container/',
+  dest: 'docs/.vuepress/dist/vuepress-plugin-demo-container-v2/',
   markdown: {
     lineNumbers: false
   },
@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   themeConfig: {
-    repo: 'calebman/vuepress-plugin-demo-container',
+    repo: 'wkcole/vuepress-plugin-demo-container-v2',
     editLinks: false,
     docsDir: 'docs',
     locales: {

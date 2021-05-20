@@ -23,9 +23,9 @@ Demo Container 使用 Vuepress 的 [chainMarkdown、extendMarkdown API](https://
 xxx
 :::
 ```
-为其包裹 `<demo-block></demo-block>` 组件，并拾取示例代码使用 `<!--pre-render-demo:${content}:pre-render-demo-->` 注释的方式缓存，等待后续读取，具体实现 [点此查看](https://github.com/calebman/vuepress-plugin-demo-container/blob/master/src/common/container.js);
+为其包裹 `<demo-block></demo-block>` 组件，并拾取示例代码使用 `<!--pre-render-demo:${content}:pre-render-demo-->` 注释的方式缓存，等待后续读取，具体实现 [点此查看](https://github.com/calebman/vuepress-plugin-demo-container-v2/blob/master/src/common/container.js);
 
-2. 拓展 markdown.render 方法，在其渲染结果的基础上，读取 `pre-render-demo` 注释的示例代码，使用 [vue-template-compiler](https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler) 将其编译成 Redner Function，并作为整个示例页面的子组件引入，拓展后的方法输出的内容为符合 Vue Template 语法的代码块，具体实现 [点此查看](https://github.com/calebman/vuepress-plugin-demo-container/blob/master/src/common/render.js);
+2. 拓展 markdown.render 方法，在其渲染结果的基础上，读取 `pre-render-demo` 注释的示例代码，使用 [vue-template-compiler](https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler) 将其编译成 Redner Function，并作为整个示例页面的子组件引入，拓展后的方法输出的内容为符合 Vue Template 语法的代码块，具体实现 [点此查看](https://github.com/calebman/vuepress-plugin-demo-container-v2/blob/master/src/common/render.js);
 
 3. 示例页面代码后续将被 [vue-loader](https://vue-loader.vuejs.org/zh/guide/) 处理，编译为最终文档。
 
@@ -78,7 +78,7 @@ export default {
   data() {
     return {
       inputRepoName: '',
-      repoName: 'calebman/vuepress-plugin-demo-container',
+      repoName: 'wkcole/vuepress-plugin-demo-container-v2',
       branches: ['master', 'dev'],
       currentBranch: 'master',
       loading: false,
@@ -173,7 +173,7 @@ export default {
 ## 为什么不是...?
 
 ::: tip 有没有其他的选择
-笔者在创造 Demo Container 之前尽可能的搜索了符合上述需求的插件，找到了以下几款有用的插件，如果有其他的可用插件被笔者遗漏了，可通过提 [Issus](https://github.com/calebman/vuepress-plugin-demo-container/issues) 的方式补充，十分感谢。
+笔者在创造 Demo Container 之前尽可能的搜索了符合上述需求的插件，找到了以下几款有用的插件，如果有其他的可用插件被笔者遗漏了，可通过提 [Issus](https://github.com/wkcole/vuepress-plugin-demo-container-v2/issues) 的方式补充，十分感谢。
 :::
 
 ### vuepress-plugin-demo-block
@@ -209,6 +209,11 @@ export default {
   <a-tooltip title="JianhuiChen">
     <a href="https://github.com/calebman" target="_blank">
       <a-avatar src="https://avatars0.githubusercontent.com/u/27751088" :size="54"/>
+    </a>
+  </a-tooltip>
+  <a-tooltip title="WaycoWei">
+    <a href="https://github.com/wkcole" target="_blank">
+      <a-avatar src="https://avatars.githubusercontent.com/u/8675871" :size="54"/>
     </a>
   </a-tooltip>
 </p>

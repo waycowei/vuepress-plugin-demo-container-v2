@@ -1,6 +1,6 @@
-# Composition api example
+# Composition API example
 
-Now you can import something from `vue` or `@vue/composition-api`
+Now you can import anything from `vue` or `@vue/composition-api`
 
 ::: demo
 ```vue

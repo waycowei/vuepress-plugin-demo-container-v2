@@ -8,13 +8,13 @@
 
 ### 安装插件
 
-使用 `yarn` 安装 `vuepress-plugin-demo-container` 组件：
+使用 `yarn` 安装 `vuepress-plugin-demo-container-v2` 组件：
 ```bash
-yarn add vuepress-plugin-demo-container -D
+yarn add vuepress-plugin-demo-container-v2 -D
 ```
 或者使用 `npm` 安装它：
 ```bash
-npm i vuepress-plugin-demo-container --save-dev
+npm i vuepress-plugin-demo-container-v2 --save-dev
 ```
 如果你的网络环境不佳，推荐使用 [cnpm](https://github.com/cnpm/cnpm)。
 

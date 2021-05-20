@@ -8,13 +8,13 @@ Please refer to the official Vuepress documentation, [click here to view](https:
 
 ### Install the plugin
 
-Use `yarn` to install the` vuepress-plugin-demo-container` component:
+Use `yarn` to install the` vuepress-plugin-demo-container-v2` component:
 ```bash
-yarn add vuepress-plugin-demo-container -D
+yarn add vuepress-plugin-demo-container-v2 -D
 ```
 Or use `npm` to install it:
 ```bash
-npm i vuepress-plugin-demo-container --save-dev
+npm i vuepress-plugin-demo-container-v2 --save-dev
 ```
 
 ### Configure plugin
