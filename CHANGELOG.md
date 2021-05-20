@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/wkcole/vuepress-plugin-demo-container-v2/compare/v0.2.0...v2.0.0) (2021-05-20)
+
+
+### Features
+
+* prepare for new repo ([bea9e88](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/bea9e885441ce8b0a3d403d4947cac276e781be5))
+* support vue & composititon api ([a691eb9](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/a691eb9cb623676894b16e157aaad072d7952c08))
+
+
+### Bug Fixes
+
+* add copy reference ([b14ef42](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/b14ef42b98152adde68259737db6611baa9c4c34))
+
 ## [0.2.0](https://github.com/calebman/vuepress-plugin-demo-container/compare/v0.1.1...v0.2.0) (2020-08-19)
 
 
