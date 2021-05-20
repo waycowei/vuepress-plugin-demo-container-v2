@@ -164,6 +164,39 @@ export default {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+.demo-block .meta .code-content > div,
+.demo-block .meta div[class*="language-"] {
+  background: #fafafa;
+  
+}
+.demo-block .meta div[class*="language-"] {
+  border: none;
+  border-radius: 0;
+}
+.demo-block .meta div[class*="language-"]::before {
+  color: #3182bd;
+}
+.demo-block .meta pre code,
+.demo-block .meta pre[class*="language-"] code,
+.demo-block .meta .token.operator {
+  color: #000;
+}
+.demo-block .meta .token.tag,
+.demo-block .meta .token.punctuation,
+.demo-block .meta .token.attr-name,
+.demo-block .meta .token.keyword,
+.demo-block .meta .token.function,
+.demo-block .meta .hljs-selector-class,
+.demo-block .meta .token.selector {
+  color: #3182bd;
+}
+.demo-block .meta .token.attr-value,
+.demo-block .meta .token.string {
+  color: #756bb1;
+}
+.demo-block .meta .token.property {
+  color: #e6550d;
+}
 .demo-block.hover {
   box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
 }
@@ -177,14 +210,14 @@ export default {
   padding: 24px;
 }
 .demo-block .meta {
-  background-color: #282c34;
-  border: solid 1px #ebebeb;
-  border-radius: 3px;
+  background: #fafafa;
+  border-top: solid 1px #ebebeb;
   overflow: hidden;
   height: 0;
   transition: height 0.2s;
 }
 .demo-block .description {
+  border-bottom: 1px solid #ebebeb;
   padding: 20px;
   box-sizing: border-box;
   border: solid 1px #ebebeb;
@@ -194,13 +227,16 @@ export default {
   color: #666;
   word-break: break-word;
   margin: 10px;
-  background-color: #fafafa;
+  background-color: #fff;
+}
+.demo-block .description + .code-content {
+  border-top: 1px solid #ebebeb;
 }
 .demo-block .demo-block-control {
-  border-top: solid 1px #eaeefb;
+  border-top: solid 1px #ebebeb;
   height: 44px;
   box-sizing: border-box;
-  background-color: #fafafa;
+  background-color: #fff;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   text-align: center;
@@ -232,9 +268,9 @@ export default {
   right: 50%;
   width: 0;
   height: 0;
-  border-bottom: 6px solid #ccc;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
 }
 .demo-block .demo-block-control .caret-bottom::before {
   content: "";
@@ -242,9 +278,10 @@ export default {
   right: 50%;
   width: 0;
   height: 0;
-  border-top: 6px solid #ccc;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
+  color: #d3dce6;
+  border-top: 7px solid #ccc;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
 }
 .demo-block .demo-block-control i {
   font-size: 16px;
@@ -269,9 +306,6 @@ export default {
 .demo-block .demo-block-control.copying {
   transform: translateX(-44px);
 }
-.demo-block .demo-block-control .copy-action-success {
-  color: #f5222d;
-}
 .demo-block .demo-block-control:hover {
   color: #409eff;
   background-color: #f9fafc;
@@ -282,18 +316,7 @@ export default {
   transform: translateX(10px);
 }
 .demo-block .demo-block-control .bounce-enter-active {
-  animation: bounce-in 0.5s;
-}
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
+  font-weight: bolder;
 }
 .demo-block .demo-block-control .control-button {
   line-height: 26px;
