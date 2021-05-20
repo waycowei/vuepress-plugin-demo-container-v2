@@ -1,3 +1,4 @@
+// https://github.com/element-plus/element-plus/blob/dev/website/md-loader/util.js
 const { compileTemplate } = require('@vue/component-compiler-utils');
 const compiler = require('vue-template-compiler');
 

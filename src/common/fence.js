@@ -1,3 +1,4 @@
+// https://github.com/element-plus/element-plus/blob/dev/website/md-loader/fence.js
 // 覆盖默认的 fence 渲染策略
 module.exports = md => {
   const defaultRender = md.renderer.rules.fence;

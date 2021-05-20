@@ -1,3 +1,4 @@
+// https://github.com/element-plus/element-plus/blob/dev/website/md-loader/index.js
 const {
   stripScript,
   stripStyle,

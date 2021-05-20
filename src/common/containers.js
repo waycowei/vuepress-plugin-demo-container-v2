@@ -1,3 +1,4 @@
+// https://github.com/element-plus/element-plus/blob/dev/website/md-loader/containers.js
 const mdContainer = require('markdown-it-container');
 
 module.exports = options => {
