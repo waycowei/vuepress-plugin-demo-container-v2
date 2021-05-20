@@ -37,7 +37,9 @@
     "vue",
     "vuepress",
     "demo",
-    "block"
+    "block",
+    "componsition",
+    "componsition-api"
   ],
   "author": "JianhuiChen, WaycoWei",
   "license": "MIT",
