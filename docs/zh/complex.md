@@ -1,6 +1,6 @@
 # 复杂示例
 
-此处提供了两种复杂场景的示例，Demo Container 都能良好的支持，具体效果如下所示：
+此处提供了两种复杂场景的示例，Demo Container V2 都能良好的支持，具体效果如下所示：
 
 ## TodoMVC 示例
 
@@ -692,7 +692,7 @@ export default ({
 
 **以下是基于组件库更全面的一个示例**
 
-::: demo  注意，目前编写示例代码时 `import` 语法是无法被 `demo-container` 成功编译的，请避免在示例中使用这种语法
+::: demo  注意，目前编写示例代码时除了 `vue` 和 `@vue/composition-api` 之外的 `import` 语法是无法被 `demo-container-v2` 成功编译的，请避免在示例中使用这种写法
 ```html
 <template>
   <div>

@@ -7,7 +7,7 @@
 
 The component name of the warp code and example.
 
-Use this parameter to customize the **demo block** component inside the Demo Container. The customized component should support the following three slots:
+Use this parameter to customize the **demo block** component inside the Demo Container V2. The customized component should support the following three slots:
 
 - Slot demo：Is rendered as an example
 - Slot description：Is rendered as example description information
@@ -42,7 +42,7 @@ Set custom sample block component CustomDemoBlock.vue.
 </template>
 ```
 
-After the Demo Container is rendered, only the main structure of the rendering is retained below.
+After the Demo Container V2 is rendered, only the main structure of the rendering is retained below.
 
 ```html
 <custom-demo-block>

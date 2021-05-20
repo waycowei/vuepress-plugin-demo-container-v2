@@ -2,13 +2,13 @@
 
 [点此查看中文简介](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/README.zh-CN.md)
 
-`Demo Container` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents. Its original intention is to reduce the difficulty of adding some related examples when writing component documents.
+`Demo Container V2` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents. Its original intention is to reduce the difficulty of adding some related examples when writing component documents.
 
 Using Vuepress to write component examples has the following embarrassment:
 1. Component examples and sample code are essentially the same, but need to be written twice;
 2. Vuepress cannot render the `export default {}` code block in Markdown;
 
-The Demo Container refers to Element UI's document rendering and implements the same syntax as it can be used to write sample syntax directly in Markdown.
+The Demo Container V2 refers to Element UI's document rendering and implements the same syntax as it can be used to write sample syntax directly in Markdown.
 * Element UI ColorPicker component **documentation example**, [click here to view](https://github.com/ElemeFE/element/blob/dev/examples/docs/en-US/color-picker.md)
 * Element UI ColorPicker component **document sample preview**, [click here to view](https://element.eleme.cn/2.0/#/en-US/component/color-picker)。
 
@@ -67,16 +67,12 @@ This project is heavily inspired by the [md-loader](https://github.com/element-p
 
 # Contributors
 <p>
-  <a-tooltip title="JianhuiChen">
-    <a href="https://github.com/calebman" target="_blank">
-      <a-avatar src="https://avatars0.githubusercontent.com/u/27751088" :size="54"/>
-    </a>
-  </a-tooltip>
-  <a-tooltip title="WaycoWei">
-    <a href="https://github.com/wkcole" target="_blank">
-      <a-avatar src="https://avatars.githubusercontent.com/u/8675871" :size="54"/>
-    </a>
-  </a-tooltip>
+  <a href="https://github.com/calebman" target="_blank">
+    <img src="https://avatars0.githubusercontent.com/u/27751088" width="54px" height="54px" style="border-radius: 50%;" title="JianhuiChen">
+  </a>
+  <a href="https://github.com/wkcole" target="_blank">
+    <img src="https://avatars0.githubusercontent.com/u/8675871" width="54px" height="54px" style="border-radius: 50%;" title="WaycoWei">
+  </a>
 </p>
 
 # License

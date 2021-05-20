@@ -7,7 +7,7 @@
 
 包裹代码与示例的组件名称。
 
-使用本参数自定义 Demo Container 内部的**示例块**组件，自定义的组件应当支持以下三个挂载点：
+使用本参数自定义 Demo Container V2 内部的**示例块**组件，自定义的组件应当支持以下三个挂载点：
 
 - Slot demo：被渲染成示例
 - Slot description：被渲染成示例描述信息
@@ -42,7 +42,7 @@ module.exports = {
 </template>
 ```
 
-经过 Demo Container 渲染后，下方只保留了渲染的主体结构
+经过 Demo Container V2 渲染后，下方只保留了渲染的主体结构
 
 ```html
 <custom-demo-block>

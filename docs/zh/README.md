@@ -1,6 +1,6 @@
 # 介绍
 
-`Demo Container` 是一个基于 `Vuepress` 的插件，它可以帮助你在编写文档的时候增加 `Vue` 示例，它的诞生初衷是为了降低编写组件文档时增加一些相关示例的难度。
+`Demo Container V2` 是一个基于 `Vuepress` 的插件，它可以帮助你在编写文档的时候增加 `Vue` 示例，它的诞生初衷是为了降低编写组件文档时增加一些相关示例的难度。
 
 ::: warning 使用 Vuepress 编写组件示例有以下尴尬之处：
 组件示例和示例代码本质上一样，却需要写两遍；
@@ -8,14 +8,14 @@
 Vuepress 无法渲染 Markdown 中多个 `export default {}` 代码块；
 :::
 
-Demo Container 参考了 Element UI 的文档渲染，实现了和它一样的，可在 Markdown 中直接编写示例的语法。
+Demo Container V2 参考了 Element UI 的文档渲染，实现了和它一样的，可在 Markdown 中直接编写示例的语法。
 * Element UI ColorPicker 组件的**文档编写示例**，[点此查看](https://github.com/ElemeFE/element/blob/dev/examples/docs/zh-CN/color-picker.md)
 * Element UI ColorPicker 组件的**文档示例预览**，[点此查看](https://element.eleme.cn/2.0/#/zh-CN/component/color-picker)。
 
 
 ## 它是如何工作的？
 
-Demo Container 使用 Vuepress 的 [chainMarkdown、extendMarkdown API](https://vuepress.vuejs.org/zh/plugin/option-api.html#extendmarkdown) 拓展了其内部的 markdown 对象，并做了以下操作：
+Demo Container V2 使用 Vuepress 的 [chainMarkdown、extendMarkdown API](https://vuepress.vuejs.org/zh/plugin/option-api.html#extendmarkdown) 拓展了其内部的 markdown 对象，并做了以下操作：
 
 1. 基于 [markdown-it-container](https://github.com/markdown-it/markdown-it-container) 构建了一个识别以下代码块的插件
 ```
@@ -23,22 +23,22 @@ Demo Container 使用 Vuepress 的 [chainMarkdown、extendMarkdown API](https://
 xxx
 :::
 ```
-为其包裹 `<demo-block></demo-block>` 组件，并拾取示例代码使用 `<!--pre-render-demo:${content}:pre-render-demo-->` 注释的方式缓存，等待后续读取，具体实现 [点此查看](https://github.com/calebman/vuepress-plugin-demo-container-v2/blob/master/src/common/container.js);
+为其包裹 `<demo-block></demo-block>` 组件，并拾取示例代码使用 `<!--pre-render-demo:${content}:pre-render-demo-->` 注释的方式缓存，等待后续读取，具体实现 [点此查看](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/containers.js);
 
-2. 拓展 markdown.render 方法，在其渲染结果的基础上，读取 `pre-render-demo` 注释的示例代码，使用 [vue-template-compiler](https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler) 将其编译成 Redner Function，并作为整个示例页面的子组件引入，拓展后的方法输出的内容为符合 Vue Template 语法的代码块，具体实现 [点此查看](https://github.com/calebman/vuepress-plugin-demo-container-v2/blob/master/src/common/render.js);
+2. 拓展 markdown.render 方法，在其渲染结果的基础上，读取 `pre-render-demo` 注释的示例代码，使用 [vue-template-compiler](https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler) 将其编译成 Redner Function，并作为整个示例页面的子组件引入，拓展后的方法输出的内容为符合 Vue Template 语法的代码块，具体实现 [点此查看](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/render.js);
 
 3. 示例页面代码后续将被 [vue-loader](https://vue-loader.vuejs.org/zh/guide/) 处理，编译为最终文档。
 
 ## 渲染效果是？
 
-::: tip 以下是使用 Demo Container 插件渲染的一个组件示例
+::: tip 以下是使用 Demo Container V2 插件渲染的一个组件示例
 其展示效果参照了 Element UI 文档组件 [demo-block.vue](https://github.com/ElemeFE/element/blob/dev/examples/components/demo-block.vue) 的实现
 :::
 
 ::: demo 这个例子参考了 `Vue` 官方文档示例中 [GitHub 提交](https://cn.vuejs.org/v2/examples/commits.html) 实现，使用 Github API 获取仓库最新的提交数据，并且以列表形式将它们展示了出来。
 ```html
 <template>
-  <div class="vuepress-plugin-demo-container-example">
+  <div class="vuepress-plugin-demo-container-v2-example">
     <input
       class="repo-name-input"
       autocomplete="off"
@@ -173,7 +173,7 @@ export default {
 ## 为什么不是...?
 
 ::: tip 有没有其他的选择
-笔者在创造 Demo Container 之前尽可能的搜索了符合上述需求的插件，找到了以下几款有用的插件，如果有其他的可用插件被笔者遗漏了，可通过提 [Issus](https://github.com/wkcole/vuepress-plugin-demo-container-v2/issues) 的方式补充，十分感谢。
+笔者在创造 Demo Container V2 之前尽可能的搜索了符合上述需求的插件，找到了以下几款有用的插件，如果有其他的可用插件被笔者遗漏了，可通过提 [Issus](https://github.com/wkcole/vuepress-plugin-demo-container-v2/issues) 的方式补充，十分感谢。
 :::
 
 ### vuepress-plugin-demo-block
@@ -189,7 +189,7 @@ export default {
 
 ### vuepress-plugin-demo-code
 
-仓库地址 [点此查看](https://github.com/BuptStEve/vuepress-plugin-demo-code)，该插件的**使用方式和 demo-block 一样属于理想方式**，插件的工作流程和 Demo Container 有相似之处，其实现原理是：
+仓库地址 [点此查看](https://github.com/BuptStEve/vuepress-plugin-demo-code)，该插件的**使用方式和 demo-block 一样属于理想方式**，插件的工作流程和 Demo Container V2 有相似之处，其实现原理是：
 
 通过 [Vuepress extendMarkdown API](https://vuepress.vuejs.org/zh/plugin/option-api.html#extendMarkdown) 拓展内部 markdown 对象，进而识别 `::: demo xxx :::` 代码块，将其包裹的示例代码直接插入 Markdown 文档等待 vue-loader 处理。
 

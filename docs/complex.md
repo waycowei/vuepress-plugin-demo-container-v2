@@ -1,6 +1,6 @@
 # Complex example
 
-Here are two examples of complex scenarios that Demo Container can support well. The specific effects are as follows:
+Here are two examples of complex scenarios that Demo Container V2 can support well. The specific effects are as follows:
 
 ## TodoMVC example
 
@@ -692,7 +692,7 @@ The rendering result is shown below
 
 **The following is a more comprehensive example based on the component library**
 
-::: demo  Note that currently, the `import` syntax cannot be successfully compiled by` demo-container-v2` when writing sample code, please avoid using this syntax in the example
+::: demo
 ```html
 <template>
   <div>

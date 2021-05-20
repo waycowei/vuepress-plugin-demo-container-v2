@@ -10,12 +10,12 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Demo Container',
+      title: 'Demo Container V2',
       description: 'plugin for vuepress to display vue demo'
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'Demo Container',
+      title: 'Demo Container V2',
       description: '用于编写 vue 组件示例的 vuepress 插件'
     }
   },

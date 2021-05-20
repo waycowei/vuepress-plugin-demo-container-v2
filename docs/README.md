@@ -1,6 +1,6 @@
 # Introduction
 
-`Demo Container` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents. Its original intention is to reduce the difficulty of adding some related examples when writing component documents.
+`Demo Container V2` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents. Its original intention is to reduce the difficulty of adding some related examples when writing component documents.
 
 ::: warning Using Vuepress to write component examples has the following embarrassment:
 Component examples and sample code are essentially the same, but need to be written twice;
@@ -8,14 +8,14 @@ Component examples and sample code are essentially the same, but need to be writ
 Vuepress cannot render multiple `export default {}` code blocks in Markdown;
 :::
 
-The Demo Container refers to Element UI's document rendering and implements the same syntax as it can be used to write sample syntax directly in Markdown.
+The Demo Container V2 refers to Element UI's document rendering and implements the same syntax as it can be used to write sample syntax directly in Markdown.
 * Element UI ColorPicker component **documentation example**,[click here to view](https://github.com/ElemeFE/element/blob/dev/examples/docs/en-US/color-picker.md)
 * Element UI ColorPicker component **document sample preview**,[click here to view](https://element.eleme.cn/2.0/#/en-US/component/color-picker)。
 
 
 ## How does it work?
 
-The Demo Container uses Vuepress's [chainMarkdown, extendMarkdown API](https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown) to expand its internal markdown object and does the following:
+The Demo Container V2 uses Vuepress's [chainMarkdown, extendMarkdown API](https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown) to expand its internal markdown object and does the following:
 
 1. Based on [markdown-it-container](https://github.com/markdown-it/markdown-it-container), a plug-in that recognizes the following code blocks is built
 ```
@@ -23,7 +23,7 @@ The Demo Container uses Vuepress's [chainMarkdown, extendMarkdown API](https://v
 xxx
 :::
 ```
-Wrap the `<demo-block> </demo-block>` component for it, and pick up the sample code using `<!-Pre-render-demo: $ {content}: pre-render-demo->` comments Cache mode, wait for subsequent reading, specific implementation [click here to view](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/container.js);
+Wrap the `<demo-block> </demo-block>` component for it, and pick up the sample code using `<!-Pre-render-demo: $ {content}: pre-render-demo->` comments Cache mode, wait for subsequent reading, specific implementation [click here to view](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/containers.js);
 
 2. Expand the markdown.render method, based on its rendering results, read the sample code annotated by `pre-render-demo` and use [vue-template-compiler](https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler) compile it into a Redner Function and introduce it as a subcomponent of the entire sample page. The output of the expanded method is a code block that conforms to Vue Template syntax, specific implementation [click here to view](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/render.js);
 
@@ -173,7 +173,7 @@ export default {
 ## Why not...?
 
 ::: tip Are there any other options
-Before I created the Demo Container, I searched for plug-ins that meet the above requirements as much as possible, and found some useful plugins. If there are other available plug-ins that have been omitted by the author, I can add it by mentioning [Issus](https://github.com/wkcole/vuepress-plugin-demo-container-v2/issues). Thank you very much.
+Before I created the Demo Container V2, I searched for plug-ins that meet the above requirements as much as possible, and found some useful plugins. If there are other available plug-ins that have been omitted by the author, I can add it by mentioning [Issus](https://github.com/wkcole/vuepress-plugin-demo-container-v2/issues). Thank you very much.
 :::
 
 ### vuepress-plugin-demo-block
@@ -189,7 +189,7 @@ The problem with this is that **template code blocks cannot contain globally reg
 
 ### vuepress-plugin-demo-code
 
-Repository [click here to view](https://github.com/BuptStEve/vuepress-plugin-demo-code)，The plug-in's **use method is the same as the demo-block**. The workflow of the plugin is similar to the Demo Container. Its implementation principle is:
+Repository [click here to view](https://github.com/BuptStEve/vuepress-plugin-demo-code)，The plug-in's **use method is the same as the demo-block**. The workflow of the plugin is similar to the Demo Container V2. Its implementation principle is:
 
 Extend the internal markdown object through [Vuepress extendMarkdown API](https://vuepress.vuejs.org/plugin/option-api.html#extendMarkdown), and then identify the `::: demo xxx :::` code block, and insert the wrapped sample code directly into the Markdown document to be processed by vue-loader.
 
