@@ -20,7 +20,7 @@ The configured component name must be registered globally in Vuepress, which can
 ```js
 module.exports = {
   plugins: {
-    'demo-container': {
+    'demo-container-v2': {
       component: 'CustomDemoBlock'
     }
   }

@@ -20,7 +20,7 @@
 ```js
 module.exports = {
   plugins: {
-    'demo-container': {
+    'demo-container-v2': {
       component: 'CustomDemoBlock'
     }
   }

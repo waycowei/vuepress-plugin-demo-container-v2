@@ -38,7 +38,7 @@ The display effect refers to the implementation of Element UI document component
 ::: demo This example refers to the [GitHub submission](https://vuejs.org/v2/examples/commits.html) implementation in the example of the `Vue` official document, uses the Github API to get the latest submission data of the repository, and displays them in a list.
 ```html
 <template>
-  <div class="vuepress-plugin-demo-container-example">
+  <div class="vuepress-plugin-demo-container-v2-example">
     <input
       class="repo-name-input"
       autocomplete="off"
@@ -135,10 +135,10 @@ export default {
 </script>
 
 <style>
-.vuepress-plugin-demo-container-example .branch {
+.vuepress-plugin-demo-container-v2-example .branch {
   margin-right: 8px;
 }
-.vuepress-plugin-demo-container-example .danger-msg {
+.vuepress-plugin-demo-container-v2-example .danger-msg {
   color: #f56c6c;
 }
 .repo-name-input,

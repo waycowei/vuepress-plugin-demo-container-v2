@@ -24,7 +24,7 @@ Open the .vuepress/config.js file, and then reference the plugin in the appropri
 ```js
 module.exports = {
   ...
-  plugins: ['demo-container']
+  plugins: ['demo-container-v2']
   ...
 }
 ```

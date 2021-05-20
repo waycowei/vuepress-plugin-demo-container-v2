@@ -4,7 +4,7 @@ Here are two examples of complex scenarios that Demo Container can support well.
 
 ## TodoMVC example
 
-`demo-container` provides good support for the example. This example is taken from the more complicated` TodoMVC` in the example of the `Vue` official document, and its display effect [Click here to view](https://vuejs.org/v2/examples/todomvc.html)
+`demo-container-v2` provides good support for the example. This example is taken from the more complicated` TodoMVC` in the example of the `Vue` official document, and its display effect [Click here to view](https://vuejs.org/v2/examples/todomvc.html)
 
 After copying the official code and transforming it into `template`, use the following syntax to quote
 
@@ -692,7 +692,7 @@ The rendering result is shown below
 
 **The following is a more comprehensive example based on the component library**
 
-::: demo  Note that currently, the `import` syntax cannot be successfully compiled by` demo-container` when writing sample code, please avoid using this syntax in the example
+::: demo  Note that currently, the `import` syntax cannot be successfully compiled by` demo-container-v2` when writing sample code, please avoid using this syntax in the example
 ```html
 <template>
   <div>

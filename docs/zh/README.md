@@ -135,10 +135,10 @@ export default {
 </script>
 
 <style>
-.vuepress-plugin-demo-container-example .branch {
+.vuepress-plugin-v2-example .branch {
   margin-right: 8px;
 }
-.vuepress-plugin-demo-container-example .danger-msg {
+.vuepress-plugin-demo-container-v2-example .danger-msg {
   color: #f56c6c;
 }
 .repo-name-input,

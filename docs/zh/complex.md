@@ -4,7 +4,7 @@
 
 ## TodoMVC 示例
 
-`demo-container` 对示例提供了良好的支持，本例子取自 `Vue` 官方文档示例中较为复杂的 `TodoMVC`，其展示效果 [点此查看](https://cn.vuejs.org/v2/examples/todomvc.html)
+`demo-container-v2` 对示例提供了良好的支持，本例子取自 `Vue` 官方文档示例中较为复杂的 `TodoMVC`，其展示效果 [点此查看](https://cn.vuejs.org/v2/examples/todomvc.html)
 
 拷贝官方代码将其改造成 `template` 的写法后，通过以下语法引用
 
