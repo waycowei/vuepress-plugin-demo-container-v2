@@ -66,10 +66,10 @@ npm i vuepress-plugin-demo-container-v2 -D
 # 贡献者
 <p>
   <a href="https://github.com/calebman" target="_blank">
-    <img src="https://avatars0.githubusercontent.com/u/27751088" width="54px" height="54px" style="border-radius: 50%;" title="JianhuiChen">
+    <img src="https://avatars0.githubusercontent.com/u/27751088" width="54px" height="54px" style="border-radius: 50%;" title="JianhuiChen" class="avatar-user avatar">
   </a>
   <a href="https://github.com/wkcole" target="_blank">
-    <img src="https://avatars0.githubusercontent.com/u/8675871" width="54px" height="54px" style="border-radius: 50%;" title="WaycoWei">
+    <img src="https://avatars0.githubusercontent.com/u/8675871" width="54px" height="54px" style="border-radius: 50%;" title="WaycoWei" class="avatar-user avatar">
   </a>
 </p>
 
