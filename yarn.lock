@@ -1161,6 +1161,13 @@
   optionalDependencies:
     prettier "^1.18.2"
 
+"@vue/composition-api@^1.0.0-rc.9":
+  version "1.0.0-rc.9"
+  resolved "https://registry.nlark.com/@vue/composition-api/download/@vue/composition-api-1.0.0-rc.9.tgz?cache=0&sync_timestamp=1621420124460&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Fcomposition-api%2Fdownload%2F%40vue%2Fcomposition-api-1.0.0-rc.9.tgz#ddfcaa13040add84edab918573dfc999b5f03cf3"
+  integrity sha1-3fyqEwQK3YTtq5GFc9/JmbXwPPM=
+  dependencies:
+    tslib "^2.2.0"
+
 "@vuepress/core@1.5.3":
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/@vuepress/core/-/core-1.5.3.tgz#e48728a26a60b21673c7b8f1f7377c03fb17e34f"
@@ -5885,6 +5892,11 @@ markdown-it-chain@^1.3.0:
   dependencies:
     webpack-chain "^4.9.0"
 
+markdown-it-container@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/markdown-it-container/download/markdown-it-container-3.0.0.tgz#1d19b06040a020f9a827577bb7dbf67aa5de9a5b"
+  integrity sha1-HRmwYECgIPmoJ1d7t9v2eqXemls=
+
 markdown-it-container@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/markdown-it-container/-/markdown-it-container-2.0.0.tgz#0019b43fd02eefece2f1960a2895fba81a404695"
@@ -8887,6 +8899,11 @@ tslib@^1.10.0, tslib@^1.9.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
+
+tslib@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.2.0.tgz?cache=0&sync_timestamp=1618847132149&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
+  integrity sha1-+yxHWXfjXiQTEe3iaTzuHsZpj1w=
 
 tty-browserify@0.0.0:
   version "0.0.0"

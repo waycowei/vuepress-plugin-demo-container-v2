@@ -43,6 +43,8 @@ module.exports = function (content) {
   let pageScript = '';
   if (componenetsString) {
     pageScript = `<script>
+      import * as CompostionApi from '@vue/composition-api';
+      import * as Vue from 'vue';
       export default {
         name: 'component-doc',
         components: {
