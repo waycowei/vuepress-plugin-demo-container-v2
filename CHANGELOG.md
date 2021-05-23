@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/wkcole/vuepress-plugin-demo-container-v2/compare/v2.0.0...v2.2.0) (2021-05-23)
+
+
+### Features
+
+* add npm keywords ([296e532](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/296e532a1963eb2675e74506307a4d2fe1b7abfb))
+
+## [2.1.0](https://github.com/wkcole/vuepress-plugin-demo-container-v2/compare/v2.0.0...v2.1.0) (2021-05-23)
+
+
+### Features
+
+* add npm keywords ([296e532](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/296e532a1963eb2675e74506307a4d2fe1b7abfb))
+
 ## [2.0.0](https://github.com/wkcole/vuepress-plugin-demo-container-v2/compare/v0.2.0...v2.0.0) (2021-05-20)
 
 
