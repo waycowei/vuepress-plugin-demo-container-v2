@@ -1,27 +1,29 @@
 # Introduction
 
-[点此查看中文简介](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/README.zh-CN.md)
+[中文 README](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/README.zh-CN.md)
 
-`Demo Container V2` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents. Its original intention is to reduce the difficulty of adding some related examples when writing component documents.
+`Demo Container V2` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents.
 
-Using Vuepress to write component examples has the following embarrassment:
-1. Component examples and sample code are essentially the same, but need to be written twice;
-2. Vuepress cannot render the `export default {}` code block in Markdown;
+It can help you:
+1. Write an example to automatically generate component examples and code examples by the custom `::: demo` syntax;
+2. Support the `import` syntax in code example;
 
-The Demo Container V2 refers to Element UI's document rendering and implements the same syntax as it can be used to write sample syntax directly in Markdown.
-* Element UI ColorPicker component **documentation example**, [click here to view](https://github.com/ElemeFE/element/blob/dev/examples/docs/en-US/color-picker.md)
-* Element UI ColorPicker component **document sample preview**, [click here to view](https://element.eleme.cn/2.0/#/en-US/component/color-picker)。
-
-[Click here for examples and documentation](https://wkcole.github.io/vuepress-plugin-demo-container-v2/)
+# Install
+Use `yarn`:
+```bash
+yarn add vuepress-plugin-demo-container-v2 -D
+```
+Or `npm`:
+```bash
+npm i vuepress-plugin-demo-container-v2 -D
+```
 
 # Usage
-Open the .vuepress/config.js file, and then reference the plugin in the appropriate location:
+Open the `.vuepress/config.js` file, and then reference the plugin in the appropriate location:
 
 ```js
 module.exports = {
-  ...
   plugins: ['demo-container-v2']
-  ...
 }
 ```
 
@@ -48,22 +50,15 @@ Write the following code in the Markdown file:
     }
   }
 </script>
-\``` <= ignore the \
+` ``
+<!-- ignore space in the previous line -->
 :::
 ```
 
-# Install
-Use `yarn`:
-```bash
-yarn add vuepress-plugin-demo-container-v2 -D
-```
-Or `npm`:
-```bash
-npm i vuepress-plugin-demo-container-v2 -D
-```
+[View full documentation](https://wkcole.github.io/vuepress-plugin-demo-container-v2/zh/)
 
 # Thanks
-This project is heavily inspired by the [md-loader](https://github.com/element-plus/element-plus/tree/dev/website/md-loader) of ElementUI.
+This project is heavily inspired by the [md-loader](https://github.com/element-plus/element-plus/tree/dev/website/md-loader) of ElemeFE team.
 
 # Contributors
 <p>
