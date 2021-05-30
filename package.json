@@ -4,9 +4,9 @@
   "description": "Vuepress plugin for demo block.",
   "main": "src/index.js",
   "scripts": {
-    "release": "standard-version && git push --follow-tags origin master",
-    "release:minor": "standard-version --release-as minor && git push --follow-tags origin master",
-    "release:major": "standard-version --release-as major && git push --follow-tags origin master",
+    "release": "standard-version && git push --tags origin master",
+    "release:minor": "standard-version --release-as minor && git push --tags origin master",
+    "release:major": "standard-version --release-as major && git push --tags origin master",
     "docs:dev": "vuepress dev docs --no-cache --debug",
     "docs:build": "vuepress build docs",
     "docs:build-preview": "vuepress build docs && anywhere -d docs/.vuepress/dist/"
