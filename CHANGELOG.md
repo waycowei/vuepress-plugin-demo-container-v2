@@ -8,12 +8,6 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * suport import syntax ([2bb2f50](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/2bb2f50c057478296f69f9ac6590330cf7186dc7))
-
-## [2.2.0](https://github.com/wkcole/vuepress-plugin-demo-container-v2/compare/v2.0.0...v2.2.0) (2021-05-23)
-
-
-### Features
-
 * add npm keywords ([296e532](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/296e532a1963eb2675e74506307a4d2fe1b7abfb))
 
 ## [2.1.0](https://github.com/wkcole/vuepress-plugin-demo-container-v2/compare/v2.0.0...v2.1.0) (2021-05-23)
