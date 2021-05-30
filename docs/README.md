@@ -2,17 +2,6 @@
 
 `Demo Container V2` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents. Its original intention is to reduce the difficulty of adding some related examples when writing component documents.
 
-::: warning Using Vuepress to write component examples has the following embarrassment:
-Component examples and sample code are essentially the same, but need to be written twice;
-
-Vuepress cannot render multiple `export default {}` code blocks in Markdown;
-:::
-
-The Demo Container V2 refers to Element UI's document rendering and implements the same syntax as it can be used to write sample syntax directly in Markdown.
-* Element UI ColorPicker component **documentation example**,[click here to view](https://github.com/ElemeFE/element/blob/dev/examples/docs/en-US/color-picker.md)
-* Element UI ColorPicker component **document sample preview**,[click here to view](https://element.eleme.cn/2.0/#/en-US/component/color-picker)。
-
-
 ## How does it work?
 
 The Demo Container V2 uses Vuepress's [chainMarkdown, extendMarkdown API](https://vuepress.vuejs.org/plugin/option-api.html#extendmarkdown) to expand its internal markdown object and does the following:
@@ -23,11 +12,11 @@ The Demo Container V2 uses Vuepress's [chainMarkdown, extendMarkdown API](https:
 xxx
 :::
 ```
-Wrap the `<demo-block> </demo-block>` component for it, and pick up the sample code using `<!-Pre-render-demo: $ {content}: pre-render-demo->` comments Cache mode, wait for subsequent reading, specific implementation [click here to view](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/containers.js);
+Wrap code by `<demo-block> </demo-block>` component, wait for subsequent reading;
 
-2. Expand the markdown.render method, based on its rendering results, read the sample code annotated by `pre-render-demo` and use [vue-template-compiler](https://github.com/vuejs/vue/tree/dev/packages/vue-template-compiler) compile it into a Redner Function and introduce it as a subcomponent of the entire sample page. The output of the expanded method is a code block that conforms to Vue Template syntax, specific implementation [click here to view](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/src/common/render.js);
+2. Expand the `markdown.render` method, based on its rendering results, read the sample code annotated by `pre-render-demo` and use `vue-template-compiler` compile it into a Redner Function and introduce it as a subcomponent of the entire sample page.
 
-3. The sample page code will be processed by [vue-loader](https://vue-loader.vuejs.org/guide/) and compiled into the final document
+3. The sample page code will be processed by `vue-loader` and compiled into the final document
 
 ## What is the rendering effect?
 
@@ -169,39 +158,6 @@ export default {
 </style>
 ```
 :::
-
-## Why not...?
-
-::: tip Are there any other options
-Before I created the Demo Container V2, I searched for plug-ins that meet the above requirements as much as possible, and found some useful plugins. If there are other available plug-ins that have been omitted by the author, I can add it by mentioning [Issus](https://github.com/wkcole/vuepress-plugin-demo-container-v2/issues). Thank you very much.
-:::
-
-### vuepress-plugin-demo-block
-
-Repository [click here to view](https://github.com/xiguaxigua/vuepress-plugin-demo-block),the **use of this plugin is exactly the same as the author's ideal way**, and its implementation principle is
-
-Through [Vuepress clientRootMixin API](https://vuepress.vuejs.org/plugin/option-api.html#clientrootmixin) mixed into the mounted and updated life cycle of the page, read the sample code to separate the `template`,` script`, `style` code blocks:
-* The code block wrapped by the template is inserted directly into the example node;
-* The code block wrapped by script compiles the Vue object through Vue.extend, and then calls its $ mount () method to mount it to the sample dom;
-* The code block wrapped in style is inserted directly into the document;
-
-The problem with this is that **template code blocks cannot contain globally registered components in Vuepress**, and writing component library examples will necessarily rely on globally registered components.
-
-### vuepress-plugin-demo-code
-
-Repository [click here to view](https://github.com/BuptStEve/vuepress-plugin-demo-code)，The plug-in's **use method is the same as the demo-block**. The workflow of the plugin is similar to the Demo Container V2. Its implementation principle is:
-
-Extend the internal markdown object through [Vuepress extendMarkdown API](https://vuepress.vuejs.org/plugin/option-api.html#extendMarkdown), and then identify the `::: demo xxx :::` code block, and insert the wrapped sample code directly into the Markdown document to be processed by vue-loader.
-
-The problem with this is that **only the `export default {}` block of the first example will be successfully recognized**, because vue-loader will only process the first match to the package when compiling a single file `<script> </script>` Code block.
-
-### vuepress-plugin-extract-code
-
-Repository [click here to view](https://github.com/vuepress-reco/vuepress-plugin-extract-code),The usage of this plugin is not consistent with the author's ideal way, but it **resolves the problem that component examples and code need to be written twice**, and its implementation principle is:
-
-Provide a RecoDemo component for constructing sample pages in Markdown, and add a plug-in to Vuepress's internal markdown through [Vuepress chainMarkdown API](https://vuepress.vuejs.org/plugin/option-api.html#chainmarkdown). This plug-in is responsible for manually parsing `<<< @/docs/.vuepress/demo/demo.vue?template` syntax, identify the code block and add it to the sample code description, if you do n’t know the syntax, you can click [click here to view the description](https://vuepress.vuejs.org/guide/markdown.html#%E5%AF%BC%E5%85%A5%E4%BB%A3%E7%A0%81%E6%AE%B5).
-
-This takes advantage of the features of Vuepress's ability to compile Vue components, and there is no problem in use, but if a component usage document contains multiple examples, even if the single example code is very small, you have to create a file for it and register it globally. Vuepress, **The problem is troublesome maintenance**.
 
 ## Contributor
 

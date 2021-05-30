@@ -1,10 +1,10 @@
 # 复杂示例
 
-此处提供了两种复杂场景的示例，Demo Container V2 都能良好的支持，具体效果如下所示：
+此处提供了两种复杂场景的示例，Demo Container V2 都能良好的支持，具体效果如下所示：
 
 ## TodoMVC 示例
 
-`demo-container-v2` 对示例提供了良好的支持，本例子取自 `Vue` 官方文档示例中较为复杂的 `TodoMVC`，其展示效果 [点此查看](https://cn.vuejs.org/v2/examples/todomvc.html)
+本例子取自 `Vue` 官方文档示例中较为复杂的 `TodoMVC`，其展示效果 [点此查看](https://cn.vuejs.org/v2/examples/todomvc.html)
 
 拷贝官方代码将其改造成 `template` 的写法后，通过以下语法引用
 
@@ -12,7 +12,7 @@
 ::: demo `TodoMVC` 是 `Vue` 官方文档中提供的示例，其涵盖了 `data、watch、computed、methods、directives` 等较多 `API` 调用
 ```html
 // Omit TodoMVC related code...
-` ` ` <= 删除左侧空格
+` ``
 :::
 ```
 
@@ -640,7 +640,7 @@ html .clear-completed:active {
 
 ## 结合组件库示例
 
-作为一个**组件示例插件**，其使用场景大多是在开发组件库时，用作组件库的文档示例构建，在此将演示基于 [AntDeisgnVue](https://www.antdv.com/docs/vue/introduce-cn/) 组件库的文档示例编写
+作为一个 **组件示例插件**，其使用场景大多是在开发组件库时，用作组件库的文档示例构建，在此将演示基于 [AntDeisgnVue](https://www.antdv.com/docs/vue/introduce-cn/) 组件库的文档示例编写
 
 首先我们在 `Vuepress` 中 引入 `AntDesignVue` 组件库：
 
@@ -672,7 +672,7 @@ export default ({
 		<a-button type="primary">按钮</a-button>
 	</a-config-provider>
 </template>
-` ` ` <= 删除左侧空格
+` ``
 :::
 ```
 
@@ -692,7 +692,7 @@ export default ({
 
 **以下是基于组件库更全面的一个示例**
 
-::: demo  注意，目前编写示例代码时除了 `vue` 和 `@vue/composition-api` 之外的 `import` 语法是无法被 `demo-container-v2` 成功编译的，请避免在示例中使用这种写法
+::: demo 
 ```html
 <template>
   <div>

@@ -37,7 +37,7 @@ Write the following code in the Markdown file:
   </div>
 </template>
 <script>
-  import { ref } from '@vue/composition-api'
+  import { ref } from 'vue-demi'
   export default {
     setup () {
       const message = ref('Hello Here')

@@ -19,19 +19,17 @@ npm i vuepress-plugin-demo-container-v2 --save-dev
 
 ### Configure plugin
 
-Open the .vuepress/config.js file, and then reference the plugin in the appropriate location:
+Open the `.vuepress/config.js` file, and then reference the plugin in the appropriate location:
 
 ```js
 module.exports = {
-  ...
   plugins: ['demo-container-v2']
-  ...
 }
 ```
 
 If you are not familiar with VuePress plugin configuration, please click here: [Use plugin](https://vuepress.vuejs.org/zh/plugin/using-a-plugin.html)
 
-After the configuration is complete, cd to the same level directory in the .vuepress folder, run `vuepress dev .` to start the document service
+After the configuration is complete, start the VUePress dev service
 
 ## Use plugin
 
@@ -45,27 +43,24 @@ Write the following code in the Markdown file:
 ::: demo The description information of the code example is placed here, supporting the `Markdown` syntax, **the description information only supports a single line**
 ```html
 <template>
-  <div class="red-center-text">
-      <p>{{ message }}</p>
-      <input v-model="message" placeholder="Input something..."/>
+  <div>
+    <p>{{ message }}</p>
+    <AInput v-model="message" placeholder="Input something..." />
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      message: 'Hello Vue'
+  import { ref } from 'vue-demi'
+  export default {
+    setup () {
+      const message = ref('Hello Here')
+
+      return {
+        message
+      }
     }
   }
-}
 </script>
-<style>
-.red-center-text { 
-  color: #ff7875;
-  text-align: center;
-}
-</style>
-` ` `  <= Remove the left space
+` ``
 :::
 ```
 
@@ -74,25 +69,22 @@ The running effect is as follows
 ::: demo The description information of the code example is placed here, supporting the `Markdown` syntax, **the description information only supports a single line**
 ```html
 <template>
-  <div class="red-center-text">
-      <p>{{ message }}</p>
-      <input v-model="message" placeholder="Input something..."/>
+  <div>
+    <p>{{ message }}</p>
+    <AInput v-model="message" placeholder="Input something..." />
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      message: 'Hello Vue'
+  import { ref } from 'vue-demi'
+  export default {
+    setup () {
+      const message = ref('Hello Here')
+
+      return {
+        message
+      }
     }
   }
-}
 </script>
-<style>
-.red-center-text { 
-  color: #ff7875;
-  text-align: center;
-}
-</style>
 ```
 :::

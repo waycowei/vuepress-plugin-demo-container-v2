@@ -9,9 +9,9 @@ The component name of the warp code and example.
 
 Use this parameter to customize the **demo block** component inside the Demo Container V2. The customized component should support the following three slots:
 
-- Slot demo：Is rendered as an example
-- Slot description：Is rendered as example description information
-- Slot source：Source code rendered as an example
+- Slot `demo`: Is rendered as an example
+- Slot `description`: Is rendered as example description information
+- Slot `source`: Source code rendered as an example
 
 ::: warning
 The configured component name must be registered globally in Vuepress, which can be registered using `Vue.component` in enhanceApp.js.
@@ -21,13 +21,13 @@ The configured component name must be registered globally in Vuepress, which can
 module.exports = {
   plugins: {
     'demo-container-v2': {
-      component: 'CustomDemoBlock'
+      component: 'YourCustomDemoBlock'
     }
   }
 }
 ```
 
-Set custom sample block component CustomDemoBlock.vue.
+Set custom sample block component YourCustomDemoBlock.vue.
 
 ```html
 <template>
@@ -40,22 +40,6 @@ Set custom sample block component CustomDemoBlock.vue.
     <slot name="source"></slot>
   </div>
 </template>
-```
-
-After the Demo Container V2 is rendered, only the main structure of the rendering is retained below.
-
-```html
-<custom-demo-block>
-  <template slot="demo">
-    <!--render-demo:xxx:render-demo-->
-  </template>
-  <div v-if="description" slot="description">
-    <!--render-description:xxx:render-description-->
-  </div>
-  <template slot="source">
-    <!--render-source:xxx:render-source-->
-  </template>
-</custom-demo-block>
 ```
 
 ## locales

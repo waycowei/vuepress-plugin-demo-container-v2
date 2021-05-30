@@ -5,13 +5,13 @@
 - 类型：`string`
 - 默认值：`demo-block`
 
-包裹代码与示例的组件名称。
+包裹代码与示例的组件名称。提供了自定义源码显示的能力。
 
-使用本参数自定义 Demo Container V2 内部的**示例块**组件，自定义的组件应当支持以下三个挂载点：
+使用本参数自定义展示示例的 **示例块** 组件，自定义的组件应当支持以下三个插槽：
 
-- Slot demo：被渲染成示例
-- Slot description：被渲染成示例描述信息
-- Slot source：被渲染成示例的源代码
+- Slot `demo`：示例
+- Slot `description`：示例描述
+- Slot `source`：示例源码
 
 ::: warning 注意
 配置的组件名称必须在 Vuepress 全局注册，可在 enhanceApp.js 中使用 `Vue.component` 进行注册。
@@ -21,13 +21,13 @@
 module.exports = {
   plugins: {
     'demo-container-v2': {
-      component: 'CustomDemoBlock'
+      component: 'YourCustomDemoBlock'
     }
   }
 }
 ```
 
-设置自定义示例块组件 CustomDemoBlock.vue
+设置自定义示例块组件 YourCustomDemoBlock.vue
 
 ```html
 <template>
@@ -40,22 +40,6 @@ module.exports = {
     <slot name="source"></slot>
   </div>
 </template>
-```
-
-经过 Demo Container V2 渲染后，下方只保留了渲染的主体结构
-
-```html
-<custom-demo-block>
-  <template slot="demo">
-    <!--render-demo:xxx:render-demo-->
-  </template>
-  <div v-if="description" slot="description">
-    <!--render-description:xxx:render-description-->
-  </div>
-  <template slot="source">
-    <!--render-source:xxx:render-source-->
-  </template>
-</custom-demo-block>
 ```
 
 ## locales

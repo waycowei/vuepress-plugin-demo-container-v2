@@ -1,25 +1,27 @@
 # 简介
 
-`Demo Container V2` 是一个基于 `Vuepress` 的插件，它可以帮助你在编写文档的时候增加 `Vue` 示例，它的诞生初衷是为了降低编写组件文档时增加一些相关示例的难度。
+`Demo Container V2` 是一个基于 `Vuepress` 的插件，它可以为你提供简单便利的组件示例编写体验。
 
-使用 Vuepress 编写组件示例有以下尴尬之处：
-1. 组件示例和示例代码本质上一样，却需要写两遍；
-2. Vuepress 无法渲染 Markdown 中的 `export default {}` 代码块；
+它可以帮你做到：
+1. 使用自定义 `::: demo` 语法，写一遍示例即可自动生成组件示例与代码示例；
+2. 支持示例中的 `import` 语法；
 
-Demo Container V2 参考了 Element UI 的文档渲染，实现了和它一样的，可在 Markdown 中直接编写示例的语法。
-* Element UI ColorPicker 组件的**文档编写示例**，[点此查看](https://github.com/ElemeFE/element/blob/dev/examples/docs/zh-CN/color-picker.md)
-* Element UI ColorPicker 组件的**文档示例预览**，[点此查看](https://element.eleme.cn/2.0/#/zh-CN/component/color-picker)
-
-[点此查看示例与使用文档](https://wkcole.github.io/vuepress-plugin-demo-container-v2/zh/)
+# 安装
+使用 `yarn`:
+```bash
+yarn add vuepress-plugin-demo-container-v2 -D
+```
+或者 `npm`:
+```bash
+npm i vuepress-plugin-demo-container-v2 -D
+```
 
 # 使用
-打开 .vuepress/config.js 文件, 添加插件:
+打开 `.vuepress/config.js` 文件, 添加插件:
 
 ```js
 module.exports = {
-  ...
   plugins: ['demo-container-v2']
-  ...
 }
 ```
 
@@ -35,7 +37,7 @@ module.exports = {
   </div>
 </template>
 <script>
-  import { ref } from '@vue/composition-api'
+  import { ref } from 'vue-demi'
   export default {
     setup () {
       const message = ref('Hello Here')
@@ -46,22 +48,15 @@ module.exports = {
     }
   }
 </script>
-\``` <= ignore the \
+` ``
+<!-- 忽略上一行的空格 -->
 :::
 ```
 
-# 安装
-使用 `yarn`:
-```bash
-yarn add vuepress-plugin-demo-container-v2 -D
-```
-或者 `npm`:
-```bash
-npm i vuepress-plugin-demo-container-v2 -D
-```
+[点此查看完整文档](https://wkcole.github.io/vuepress-plugin-demo-container-v2/zh/)
 
 # 致谢
-该项目是受到 ElementUI / [md-loader](https://github.com/element-plus/element-plus/tree/dev/website/md-loader) 的启发而生，甚至可以说没有 `md-loader` 就没有 `vuepress-plugin-demo-container-v2`，向 **饿了么大前端** 致以最高的敬意。
+该项目是受到 ElementUI / [md-loader](https://github.com/element-plus/element-plus/tree/dev/website/md-loader) 的启发而生，向 **饿了么大前端** 致意。
 
 # 贡献者
 <p>
@@ -75,4 +70,4 @@ npm i vuepress-plugin-demo-container-v2 -D
 
 # 许可
 
-[MIT License](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/LICENSE) @2020-现在 [Wayco Wei](https://github.com/wkcole)
+[MIT License](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/LICENSE) @2020-PRESENT [Wayco Wei](https://github.com/wkcole)

@@ -20,19 +20,17 @@ npm i vuepress-plugin-demo-container-v2 --save-dev
 
 ### 配置插件
 
-打开 .vuepress/config.js 文件，然后在合适的位置引用插件：
+打开 `.vuepress/config.js` 文件，然后在合适的位置引用插件：
 
 ```js
 module.exports = {
-  ...
   plugins: ['demo-container-v2']
-  ...
 }
 ```
 
 如果你对 VuePress 插件配置不是很了解，请点这里：[使用插件](https://vuepress.vuejs.org/zh/plugin/using-a-plugin.html)
 
-配置完毕后，cd 到 .vuepress 文件夹同级目录，运行 `vuepress dev .` 即可启动文档服务
+配置完毕后，启动 VuePress
 
 ## 使用
 
@@ -46,27 +44,24 @@ module.exports = {
 ::: demo 此处放置代码示例的描述信息，支持 `Markdown` 语法，**描述信息只支持单行**
 ```html
 <template>
-  <div class="red-center-text">
-      <p>{{ message }}</p>
-      <input v-model="message" placeholder="Input something..."/>
+  <div>
+    <p>{{ message }}</p>
+    <AInput v-model="message" placeholder="Input something..." />
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      message: 'Hello Vue'
+  import { ref } from 'vue-demi'
+  export default {
+    setup () {
+      const message = ref('Hello Here')
+
+      return {
+        message
+      }
     }
   }
-}
 </script>
-<style>
-.red-center-text { 
-  color: #ff7875;
-  text-align: center;
-}
-</style>
-` ` `  <= 删除左侧空格
+` ``
 :::
 ```
 
@@ -75,25 +70,22 @@ export default {
 ::: demo 此处放置代码示例的描述信息，支持 `Markdown` 语法，**描述信息只支持单行**
 ```html
 <template>
-  <div class="red-center-text">
-      <p>{{ message }}</p>
-      <input v-model="message" placeholder="Input something..."/>
+  <div>
+    <p>{{ message }}</p>
+    <AInput v-model="message" placeholder="Input something..." />
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      message: 'Hello Vue'
+  import { ref } from 'vue-demi'
+  export default {
+    setup () {
+      const message = ref('Hello Here')
+
+      return {
+        message
+      }
     }
   }
-}
 </script>
-<style>
-.red-center-text { 
-  color: #ff7875;
-  text-align: center;
-}
-</style>
 ```
 :::

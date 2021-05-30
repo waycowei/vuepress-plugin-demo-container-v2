@@ -18,7 +18,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@vue/composition-api": "^1.0.0-rc.9",
+    "@vue/composition-api": "^1.0.0-rc.10",
     "ant-design-vue": "^1.6.1",
     "conventional-changelog-cli": "^2.0.34",
     "conventional-changelog-lint-config-cz": "^0.3.0",
@@ -29,6 +29,7 @@
     "less-loader": "^4.1.0",
     "markdown-it-container": "3.0.0",
     "standard-version": "^9.3.0",
+    "vue-demi": "^0.9.1",
     "vuepress": "1.5.3"
   },
   "keywords": [
