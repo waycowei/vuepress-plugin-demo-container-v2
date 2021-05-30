@@ -5,6 +5,7 @@ const {
   stripTemplate,
   genInlineComponentText
 } = require('./util.js');
+const os = require('os')
 
 module.exports = function (content) {
   if (!content) {
@@ -14,6 +15,7 @@ module.exports = function (content) {
   const startTagLen = startTag.length;
   const endTag = ':pre-render-demo-->';
   const endTagLen = endTag.length;
+  const importPair = {}
 
   let componenetsString = ''; // 组件引用代码
   let templateArr = []; // 模板输出内容
@@ -28,7 +30,8 @@ module.exports = function (content) {
     const html = stripTemplate(commentContent);
     const script = stripScript(commentContent);
     const style = stripStyle(commentContent);
-    const demoComponentContent = genInlineComponentText(html, script); // 示例组件代码内容
+    const [demoComponentContent, tepimportPair] = genInlineComponentText(html, script); // 示例组件代码内容
+    Object.assign(importPair, tepimportPair)
     const demoComponentName = `render-demo-${id}`; // 示例代码组件名称
     templateArr.push(`<template><${demoComponentName} /></template>`);
     styleArr.push(style);
@@ -44,8 +47,11 @@ module.exports = function (content) {
   let pageScript = '';
   if (componenetsString) {
     pageScript = `<script>
-      import * as CompostionApi from '@vue/composition-api';
-      import * as Vue from 'vue';
+      ${
+        Object
+          .keys(importPair)
+          .map(key => `import * as ${key} from '${importPair[key]}';` + os.EOL)
+      }
       export default {
         name: 'component-doc',
         components: {
