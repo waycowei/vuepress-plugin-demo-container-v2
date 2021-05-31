@@ -50,7 +50,8 @@ module.exports = function (content) {
       ${
         Object
           .keys(importPair)
-          .map(key => `import * as ${key} from '${importPair[key]}';` + os.EOL)
+          .map(key => `import * as ${key} from '${importPair[key]}';`)
+          .join(os.EOL)
       }
       export default {
         name: 'component-doc',

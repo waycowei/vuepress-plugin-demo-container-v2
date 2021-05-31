@@ -47,16 +47,21 @@ module.exports = {
   <div>
     <p>{{ message }}</p>
     <AInput v-model="message" placeholder="Input something..." />
+    <p>{{ reactiveMessage }}</p>
+    <AInput v-model="reactiveMessage.value" placeholder="Input something..." />
   </div>
 </template>
 <script>
   import { ref } from 'vue-demi'
+  import { reactive } from '@vue/composition-api'
   export default {
     setup () {
       const message = ref('Hello Here')
+      const reactiveMessage = ref({ value: '' })
 
       return {
-        message
+        message,
+        reactiveMessage
       }
     }
   }
@@ -73,16 +78,21 @@ module.exports = {
   <div>
     <p>{{ message }}</p>
     <AInput v-model="message" placeholder="Input something..." />
+    <p>{{ reactiveMessage }}</p>
+    <AInput v-model="reactiveMessage.value" placeholder="Input something..." />
   </div>
 </template>
 <script>
   import { ref } from 'vue-demi'
+  import { reactive } from '@vue/composition-api'
   export default {
     setup () {
       const message = ref('Hello Here')
+      const reactiveMessage = ref({ value: '' })
 
       return {
-        message
+        message,
+        reactiveMessage
       }
     }
   }
