@@ -1,6 +1,7 @@
 // https://github.com/element-plus/element-plus/blob/dev/website/md-loader/util.js
 const { compileTemplate } = require('@vue/component-compiler-utils');
 const compiler = require('vue-template-compiler');
+const os = require('os')
 
 function stripScript(content) {
   const result = content.match(/<(script)>([\s\S]+)<\/\1>/);
@@ -74,7 +75,20 @@ function genInlineComponentText(template, script) {
       .replace(/import\s+(.*)\s+from\s+['"]{1}(.*)['"]{1}/g, (s, s1, s2) => {
         const name = getPascalByPackageName(s2)
         importPair[name] = s2
-        return `const ${s1} = ${name}`
+        // 支持 import ss, { ssx } from 'xx'
+        const namelist = s1.split(',')
+        return namelist.map(n => {
+          if (/^\s*{.*}\s*$/.test(n)) {
+            // 支持 import { xx } from 'xx'
+            return `const ${n} = ${name}`
+          } else if (/^\s*\*\s+as\s+\S+\s*$/.test(n)) {
+            // 支持 import * as ss from 'xx'
+            return `const ${n.split(' as ')[1]} = ${name}`
+          } else {
+            // 支持 import ss from 'xx'
+            return `const ${n} = ${name}.default ? ${name}.default : ${name}`
+          }
+        }).join(os.EOL)
       })
   } else {
     script = 'const democomponentExport = {}';
