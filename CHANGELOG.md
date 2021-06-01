@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.3](https://github.com/wkcole/vuepress-plugin-demo-container-v2/compare/v2.3.1...v2.3.3) (2021-06-01)
+
+
+### Features
+
+* update changelog ([31d1982](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/31d19820e6377cd1ca24f332527ad1f9c6a91dd3))
+
+
+### Bug Fixes
+
+* compatible with import syntax ([1e6f328](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/1e6f328f3c5f839dc0ebe7142b5b45255f6ba5f0))
+* fix import issue ([c23e7c0](https://github.com/wkcole/vuepress-plugin-demo-container-v2/commit/c23e7c04350657183c5de586b5f6da44fc84faa1))
+
 ### [2.3.2](https://github.com/wkcole/vuepress-plugin-demo-container-v2/compare/v2.2.0...v2.3.2) (2021-05-31)
 
 
