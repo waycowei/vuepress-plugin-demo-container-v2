@@ -1,6 +1,6 @@
 # Introduction
 
-[中文 README](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/README.zh-CN.md)
+[中文 README](https://github.com/waycowei/vuepress-plugin-demo-container-v2/blob/master/README.zh-CN.md)
 
 `Demo Container V2` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents.
 
@@ -55,7 +55,7 @@ Write the following code in the Markdown file:
 :::
 ```
 
-[View full documentation](https://wkcole.github.io/vuepress-plugin-demo-container-v2/zh/)
+[View full documentation](https://waycowei.github.io/vuepress-plugin-demo-container-v2/zh/)
 
 # Thanks
 This project is heavily inspired by the [md-loader](https://github.com/element-plus/element-plus/tree/dev/website/md-loader) of ElemeFE team.
@@ -65,11 +65,11 @@ This project is heavily inspired by the [md-loader](https://github.com/element-p
   <a href="https://github.com/calebman" target="_blank">
     <img src="https://avatars0.githubusercontent.com/u/27751088" width="54px" height="54px" style="border-radius: 50%;" title="JianhuiChen" class="avatar-user avatar">
   </a>
-  <a href="https://github.com/wkcole" target="_blank">
+  <a href="https://github.com/waycowei" target="_blank">
     <img src="https://avatars0.githubusercontent.com/u/8675871" width="54px" height="54px" style="border-radius: 50%;" title="WaycoWei" class="avatar-user avatar">
   </a>
 </p>
 
 # License
 
-[MIT License](https://github.com/wkcole/vuepress-plugin-demo-container-v2/blob/master/LICENSE) @2020-PRESENT [Wayco Wei](https://github.com/wkcole)
+[MIT License](https://github.com/waycowei/vuepress-plugin-demo-container-v2/blob/master/LICENSE) @2020-PRESENT [Wayco Wei](https://github.com/waycowei)

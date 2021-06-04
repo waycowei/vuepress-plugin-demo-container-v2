@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   themeConfig: {
-    repo: 'wkcole/vuepress-plugin-demo-container-v2',
+    repo: 'waycowei/vuepress-plugin-demo-container-v2',
     editLinks: false,
     docsDir: 'docs',
     locales: {
