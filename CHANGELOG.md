@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.4](https://github.com/waycowei/vuepress-plugin-demo-container-v2/compare/v2.3.3...v2.3.4) (2021-06-07)
+
+
+### Features
+
+* support light code line ([ff80f7c](https://github.com/waycowei/vuepress-plugin-demo-container-v2/commit/ff80f7cf3b39d5b9357404f01ef164ddd3b489d0))
+
+
+### Bug Fixes
+
+* rename ([39e0b9e](https://github.com/waycowei/vuepress-plugin-demo-container-v2/commit/39e0b9eefbf8c85a5924b68fac5d7b367519c39e))
+
 ### [2.3.3](https://github.com/waycowei/vuepress-plugin-demo-container-v2/compare/v2.3.1...v2.3.3) (2021-06-01)
 
 
