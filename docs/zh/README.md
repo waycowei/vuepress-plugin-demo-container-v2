@@ -67,7 +67,7 @@ export default {
   data() {
     return {
       inputRepoName: '',
-      repoName: 'wkcole/vuepress-plugin-demo-container-v2',
+      repoName: 'waycowei/vuepress-plugin-demo-container-v2',
       branches: ['master', 'dev'],
       currentBranch: 'master',
       loading: false,
@@ -164,7 +164,7 @@ export default {
     </a>
   </a-tooltip>
   <a-tooltip title="WaycoWei">
-    <a href="https://github.com/wkcole" target="_blank">
+    <a href="https://github.com/waycowei" target="_blank">
       <a-avatar src="https://avatars.githubusercontent.com/u/8675871" :size="54"/>
     </a>
   </a-tooltip>

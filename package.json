@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wkcole/vuepress-plugin-demo-container-v2.git"
+    "url": "https://github.com/waycowei/vuepress-plugin-demo-container-v2.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -46,9 +46,9 @@
   "author": "JianhuiChen, WaycoWei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wkcole/vuepress-plugin-demo-container-v2/issues"
+    "url": "https://github.com/waycowei/vuepress-plugin-demo-container-v2/issues"
   },
-  "homepage": "https://github.com/wkcole/vuepress-plugin-demo-container-v2#readme",
+  "homepage": "https://github.com/waycowei/vuepress-plugin-demo-container-v2#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
