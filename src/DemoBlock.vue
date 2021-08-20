@@ -181,6 +181,32 @@ export default {
 .demo-block .meta .token.operator {
   color: #000;
 }
+.demo-block .meta .code-content div[class*="language-"].line-numbers-mode::after {
+  width: 2rem;
+  background-color: #fafafa;
+  border: none;
+}
+.demo-block .meta .code-content div[class*="language-"].line-numbers-mode .line-numbers-wrapper .line-number {
+  color: #756bb1;
+}
+.demo-block .meta .code-content div[class*="language-"].line-numbers-mode .line-numbers-wrapper {
+  width: 2rem;
+}
+.demo-block .meta .code-content div[class*="language-"].line-numbers-mode pre {
+  padding-left: 2.5rem;
+}
+.demo-block .meta pre[class*="language-"]::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+.demo-block .meta pre[class*="language-"]::-webkit-scrollbar-track {
+  background-color: #fafafa;
+}
+.demo-block .meta pre[class*="language-"]::-webkit-scrollbar-thumb {
+  background-color: #CBCBCB;
+}
 .demo-block .meta .token.tag,
 .demo-block .meta .token.punctuation,
 .demo-block .meta .token.attr-name,

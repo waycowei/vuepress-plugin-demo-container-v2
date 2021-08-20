@@ -2,8 +2,6 @@
 
 [中文 README](https://github.com/waycowei/vuepress-plugin-demo-container-v2/blob/master/README.zh-CN.md)
 
-**For users with VuePress v2, please check out the [vuepress-plugin-demo-container-v3](https://github.com/wkcole/vuepress-plugin-demo-container-v3)**
-
 `Demo Container V2` is a `Vuepress-based` plug-in, which can help you add `Vue` examples when writing documents.
 
 It can help you:

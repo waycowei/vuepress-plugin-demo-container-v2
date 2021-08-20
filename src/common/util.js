@@ -75,17 +75,14 @@ function genInlineComponentText(template, script) {
       .replace(/import\s+(.*)\s+from\s+['"]{1}(.*)['"]{1}/g, (s, s1, s2) => {
         const name = getPascalByPackageName(s2)
         importPair[name] = s2
-        // 支持 import ss, { ssx } from 'xx'
+        if (/^\s*{.*}\s*$/.test(s1)) {
+          return `const ${s1} = ${name}`
+        }
         const namelist = s1.split(',')
         return namelist.map(n => {
-          if (/^\s*{.*}\s*$/.test(n)) {
-            // 支持 import { xx } from 'xx'
-            return `const ${n} = ${name}`
-          } else if (/^\s*\*\s+as\s+\S+\s*$/.test(n)) {
-            // 支持 import * as ss from 'xx'
+          if (/^\s*\*\s+as\s+\S+\s*$/.test(n)) {
             return `const ${n.split(' as ')[1]} = ${name}`
           } else {
-            // 支持 import ss from 'xx'
             return `const ${n} = ${name}.default ? ${name}.default : ${name}`
           }
         }).join(os.EOL)
